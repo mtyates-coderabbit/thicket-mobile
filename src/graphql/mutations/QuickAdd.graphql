@@ -1,0 +1,13 @@
+mutation QuickAdd($cartId: ID!, $productId: ID!) {
+  addToCart(cartId: $cartId, productId: $productId) {
+    id
+    subtotal
+    items {
+      quantity
+      product {
+        id
+        name
+      }
+    }
+  }
+}

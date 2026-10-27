@@ -1,0 +1,5 @@
+query MyOrders($customerId: ID!) {
+  orders(customerId: $customerId, first: 50) {
+    ...OrderCard
+  }
+}

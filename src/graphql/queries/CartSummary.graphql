@@ -1,0 +1,13 @@
+query CartSummary($id: ID!) {
+  cart(id: $id) {
+    id
+    subtotal
+    items {
+      quantity
+      product {
+        id
+        name
+      }
+    }
+  }
+}

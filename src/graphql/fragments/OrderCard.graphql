@@ -1,0 +1,10 @@
+fragment OrderCard on Order {
+  id
+  number
+  status
+  createdAt
+  total
+  payment {
+    status
+  }
+}

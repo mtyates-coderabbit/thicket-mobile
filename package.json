@@ -1,0 +1,32 @@
+{
+  "name": "thicket-mobile",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@apollo/client": "^3.14.1",
+    "expo": "~58.0.19",
+    "expo-status-bar": "~58.0.4",
+    "graphql": "^16.14.2",
+    "react": "19.3.0",
+    "react-native": "0.88.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^7.4.6",
+    "@graphql-codegen/typed-document-node": "^7.2.0",
+    "@graphql-codegen/typescript-operations": "^6.2.0",
+    "@types/react": "~19.3.0",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
+  },
+  "scripts": {
+    "start": "expo start",
+    "ios": "expo start --ios",
+    "android": "expo start --android",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "schema:pull": "node scripts/pull-schema.mjs",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "private": true,
+  "description": "Mobile app for Thicket (Expo / React Native)."
+}

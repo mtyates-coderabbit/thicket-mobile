@@ -1,0 +1,8 @@
+query Catalog {
+  products(first: 50) {
+    id
+    name
+    price
+    inStock
+  }
+}

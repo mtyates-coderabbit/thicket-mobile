@@ -1,0 +1,14 @@
+mutation PlaceOrder($input: CheckoutInput!) {
+  checkout(input: $input) {
+    order {
+      id
+      number
+      status
+      total
+    }
+    payment {
+      status
+      last4
+    }
+  }
+}

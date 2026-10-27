@@ -1,0 +1,22 @@
+query OrderReceipt($id: ID!) {
+  order(id: $id) {
+    ...OrderCard
+    subtotal
+    tax
+    currency
+    items {
+      id
+      quantity
+      lineTotal
+      product {
+        name
+      }
+    }
+    payment {
+      method
+      last4
+      amount
+      capturedAt
+    }
+  }
+}
