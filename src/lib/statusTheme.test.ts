@@ -14,4 +14,12 @@ describe('status theme', () => {
   it('groups terminal statuses as settled', () => {
     expect(ALL.filter(isSettled)).toEqual(['FULFILLED', 'CANCELLED', 'REFUNDED']);
   });
+
+  it('falls back to a neutral theme for statuses this build does not know', () => {
+    expect(getStatusTheme('PARTIALLY_REFUNDED')).toEqual({
+      label: 'Partially refunded',
+      color: '#5b605c',
+      background: '#ecebe6',
+    });
+  });
 });
